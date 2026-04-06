@@ -15,29 +15,26 @@ public:
     virtual ~MediaItem() = default;
 
     int SetTitle(const string& t);
-    int SetRating(int r);           // базовий варіант
-    int SetRating(double r);        // перевантаження
+    int SetRating(int r);          
+    int SetRating(double r);        
 
     int SetGenre(const string& g);
 
     virtual int ShowInfo();
 };
 
-// --- Book ---
 class Book : public MediaItem
 {
 public:
     Book();
 };
 
-// --- Movie ---
 class Movie : public MediaItem
 {
 public:
     Movie();
 };
 
-// --- Music ---
 class Music : public MediaItem
 {
 protected:
@@ -49,7 +46,6 @@ public:
     int ShowInfo() override;
 };
 
-// --- OnlineMusic ---
 class OnlineMusic : public Music
 {
 public:
@@ -57,7 +53,6 @@ public:
     int ShowInfo() override;
 };
 
-// --- OfflineMusic ---
 class OfflineMusic : public Music
 {
 public:
@@ -65,11 +60,11 @@ public:
     int ShowInfo() override;
 };
 
-// --- Platform ---
+
 class Platform
 {
     string name;
-    Music* musicItem;   // композиція через вказівник на базовий клас
+    Music* musicItem;  
 
 public:
     Platform(const string& n, Music* item);
