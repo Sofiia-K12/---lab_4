@@ -4,16 +4,14 @@ using namespace std;
 
 int MediaItem::SetTitle(const string& t) { title = t; return 1; }
 int MediaItem::SetRating(int r) { rating = r; return 1; }
-int MediaItem::SetRating(double r) { rating = static_cast<int>(r); return 1; } 
+int MediaItem::SetRating(double r) { rating = static_cast<int>(r); return 1; }
 int MediaItem::SetGenre(const string& g) { genre = g; return 1; }
-
 int MediaItem::ShowInfo() {
     cout << "Назва: " << title
          << ", Жанр: " << genre
          << ", Рейтинг: " << rating;
     return 1;
 }
-
 
 Book::Book() {
     SetTitle("Виживуть п'ятеро");

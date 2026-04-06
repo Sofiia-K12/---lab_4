@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <string>
-
 using namespace std;
 
 class MediaItem
@@ -15,22 +14,19 @@ public:
     virtual ~MediaItem() = default;
 
     int SetTitle(const string& t);
-    int SetRating(int r);          
-    int SetRating(double r);        
-
+    int SetRating(int r);
+    int SetRating(double r);
     int SetGenre(const string& g);
 
     virtual int ShowInfo();
 };
 
-class Book : public MediaItem
-{
+class Book : public MediaItem {
 public:
     Book();
 };
 
-class Movie : public MediaItem
-{
+class Movie : public MediaItem {
 public:
     Movie();
 };
@@ -60,7 +56,6 @@ public:
     int ShowInfo() override;
 };
 
-
 class Platform
 {
     string name;
@@ -68,7 +63,6 @@ class Platform
 
 public:
     Platform(const string& n, Music* item);
-
     int SetName(const string& n);
     int Info(const string& recommendation);
 };
