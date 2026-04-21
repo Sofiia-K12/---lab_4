@@ -5,7 +5,7 @@ using namespace std;
 
 class MediaItem
 {
-protected:
+private:
     string title;
     int rating;
     string genre;
@@ -15,7 +15,7 @@ public:
 
     int SetTitle(const string& t);
     int SetRating(int r);
-    int SetRating(double r);
+    int SetRatingFromDouble(double r);
     int SetGenre(const string& g);
 
     virtual int ShowInfo();
@@ -33,7 +33,7 @@ public:
 
 class Music : public MediaItem
 {
-protected:
+private:
     int duration;
 
 public:
@@ -58,6 +58,7 @@ public:
 
 class Platform
 {
+private:
     string name;
     Music* musicItem;  
 

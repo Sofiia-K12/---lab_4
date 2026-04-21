@@ -4,7 +4,7 @@ using namespace std;
 
 int MediaItem::SetTitle(const string& t) { title = t; return 1; }
 int MediaItem::SetRating(int r) { rating = r; return 1; }
-int MediaItem::SetRating(double r) { rating = static_cast<int>(r); return 1; }
+int MediaItem::SetRatingFromDouble(double r){rating =r; return 1;}
 int MediaItem::SetGenre(const string& g) { genre = g; return 1; }
 int MediaItem::ShowInfo() {
     cout << "Назва: " << title
@@ -65,7 +65,7 @@ int Platform::SetName(const string& n) { name = n; return 1; }
 
 int Platform::Info(const string& recommendation) {
     cout << "Платформа: " << name
-         << ", рекомендація: " << recommendation << endl;
+         << " " << recommendation << endl;
     if (musicItem) musicItem->ShowInfo();
     cout << endl;
     return 1;

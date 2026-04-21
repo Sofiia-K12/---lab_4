@@ -46,13 +46,13 @@ int main()
     cout << "\n Платформи \n\n";
 
     Music* platMusic1 = new OnlineMusic(3);
-    Platform* plat1 = new Platform("Spotify", platMusic1);
+    Platform* plat1 = new Platform("Spotify, ", platMusic1);
     plat1->Info("Рекомендована пісня: Self Aware");
     delete plat1;
     delete platMusic1;
 
     Music* platMusic2 = new OfflineMusic(4);
-    Platform* plat2 = new Platform("Apple Music", platMusic2);
+    Platform* plat2 = new Platform("Apple Music,", platMusic2);
     plat2->Info("Рекомендована пісня: Self Aware");
     delete plat2;
     delete platMusic2;
